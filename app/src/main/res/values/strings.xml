@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ChatRoom</string>
+    <string name="messge">消息(%1$d)</string>
+    <string name="voice_time">%1$d\"</string>
+    <string name="rc_yesterday_format">昨天 %1$s</string>
+    <string name="group_person">本群共%1$d人</string>
+    <string name="quan_level">LV.%1$d 大圈</string>
+    <string name="red_name">%1$s的红包</string>
+    <string name="red_des">微信红包</string>
+    <string name="add_quan">加入圈子</string>
+</resources>

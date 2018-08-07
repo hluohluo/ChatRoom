@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/chat_list"
+        android:layout_above="@+id/chat_editbar"
+        android:layout_width="match_parent"
+        android:overScrollMode="never"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_div"
+        />
+
+    <LinearLayout
+        android:id="@+id/bottom_container_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f4f4f4"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tongbao_utils"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame_bg"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/voice_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@mipmap/voice_btn_normal"
+                android:padding="4dp" />
+
+            <EditText
+                android:id="@+id/mess_et"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/chat_edit"
+                android:inputType="textMultiLine"
+                android:scrollHorizontally="false"
+                android:padding="5dp"
+                android:textSize="16sp" />
+
+            <mars.chatroom.record.RecordTextView
+                android:id="@+id/chat_recordText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/chat_edit"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:text="按住 说话"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/emoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/emoji"
+                android:padding="4dp" />
+
+            <ImageView
+                android:id="@+id/plus_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:background="@mipmap/tb_more"
+                android:padding="4dp" />
+            <TextView
+                android:id="@+id/chat_send"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chat_send"
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/white"
+                android:text="发送"
+                android:padding="6dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/border_div"
+        />
+    <LinearLayout
+        android:id="@+id/plus_content"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="160dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/plus_pic"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/picture"/>
+        <ImageView
+            android:id="@+id/plus_camera"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/camera"/>
+        <ImageView
+            android:id="@+id/plus_redbag"
+            android:layout_marginTop="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@mipmap/redbag"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/emoji_menu"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/emoji_face"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+        </android.support.v4.view.ViewPager>
+
+        <RadioGroup
+            android:id="@+id/emoji_point"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginBottom="6dip"
+            android:background="#00000000"
+            android:gravity="center"
+            android:orientation="horizontal">
+        </RadioGroup>
+    </LinearLayout>
+
+</LinearLayout>

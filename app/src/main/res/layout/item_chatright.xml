@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/chat_time"
+        android:text="07月03日 12:02"
+        android:visibility="gone"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:background="@android:color/transparent" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <mars.chatroom.chat.ChatStroke
+                android:id="@+id/chat_stroke"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/chat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:layout_centerVertical="true"
+                app:cs_colorBackground="@color/chat_right_bg"
+                app:cs_direction="1">
+
+                <TextView
+                    android:id="@+id/chat_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="哈哈哈哈"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/chat_right_text" />
+
+            </mars.chatroom.chat.ChatStroke>
+
+            <mars.chatroom.chat.ChatStroke
+                android:id="@+id/chat_voice"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/chat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                app:cs_colorBackground="@color/chat_right_bg"
+                app:cs_direction="1">
+
+                <ImageView
+                    android:id="@+id/voice_pic"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/v_right3"/>
+
+            </mars.chatroom.chat.ChatStroke>
+
+            <mars.chatroom.chat.ChatStroke
+                android:id="@+id/stroke_img"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/chat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+                android:visibility="gone"
+                app:cs_colorBackground="@color/chat_right_bg"
+                app:cs_direction="1">
+                <mars.chatroom.utils.ScaleImageView
+                    android:id="@+id/chat_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"/>
+            </mars.chatroom.chat.ChatStroke>
+
+
+            <mars.chatroom.chat.ChatStroke
+                android:id="@+id/stroke_red"
+                android:layout_marginRight="4dp"
+                android:layout_toLeftOf="@id/chat_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                app:cs_colorBackground="@color/chat_redbag_bg"
+                app:cs_direction="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp">
+                        <ImageView
+                            android:layout_marginLeft="8dp"
+                            android:layout_centerVertical="true"
+                            android:id="@+id/red_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/red"/>
+                        <LinearLayout
+                            android:layout_marginLeft="6dp"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@id/red_img"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/red_des"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="恭喜发财，大吉大利"
+                                android:textColor="@color/white"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:maxEms="10"/>
+                            <TextView
+                                android:layout_marginTop="3dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/redbag_text1"
+                                android:textSize="12sp"
+                                android:text="领取红包"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/redbag_text2"
+                        android:text="@string/red_des"
+                        android:paddingLeft="6dp"
+                        android:textSize="10sp"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/chat_red"/>
+                </LinearLayout>
+
+            </mars.chatroom.chat.ChatStroke>
+
+            <TextView
+                android:padding="3dp"
+                android:layout_toLeftOf="@id/chat_voice"
+                android:id="@+id/voice_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/time"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:text="2''"/>
+            <mars.chatroom.utils.CircleImageView
+                android:id="@+id/chat_icon"
+                android:layout_alignParentRight="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

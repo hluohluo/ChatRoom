@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/red_top">
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/back_ye" />
+
+            <TextView
+                android:id="@+id/re"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:text="返回"
+                android:textColor="@color/redbag_title"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="微信红包"
+            android:textColor="@color/redbag_title"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/dampview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/top"
+        android:fadingEdge="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/red_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/red_top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/red_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/icon" />
+
+            <TextView
+                android:id="@+id/red_own"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="8dp"
+                android:text="life的红包"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_normal" />
+
+            <TextView
+                android:id="@+id/red_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="恭喜发现，大吉大利"
+                android:textSize="@dimen/textsize_normal" />
+
+            <LinearLayout
+                android:id="@+id/red_je_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:id="@+id/red_je"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3.65"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="元"
+                    android:textSize="@dimen/textsize_normal"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/redtop2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/red_top"
+            android:scaleType="fitXY"
+            android:src="@mipmap/red_top2" />
+
+        <TextView
+            android:id="@+id/red_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/redtop2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="1个红包共10元"
+            android:textColor="@color/time" />
+
+            <View
+                android:id="@+id/driver"
+                android:layout_below="@id/red_info"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/border_div" />
+
+            <ListView
+                android:id="@+id/redListView"
+                android:layout_below="@id/driver"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/border_div"
+                android:paddingLeft="3dp"
+                android:dividerHeight="1dp"
+                android:scrollbars="none"
+                android:listSelector="@color/transparent"
+                >
+            </ListView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

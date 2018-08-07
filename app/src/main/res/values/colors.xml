@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="light_gray_2">#f0f2f6</color>
+    <color name="chat_right_bg">#ff8400</color>
+    <color name="main_theme">#ff8400</color>
+    <color name="chat_right_text">#ffffff</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#333333</color>
+    <color name="time">#aaaaaa</color>
+    <color name="border_div">#dfdfdf</color>
+    <color name="redbag_tips_text">#ff452c</color>
+    <color name="redbag_tips_bg">#ffc888</color>
+    <color name="redbag_text1">#feecd8</color>
+    <color name="redbag_text2">#969696</color>
+    <color name="chat_redbag_bg">#fa9d3b</color>
+    <color name="quan_add">#d12222</color>
+    <color name="red_top">#d85940</color>
+    <color name="redbag_title">#ffe4b4</color>
+    <color name="redbag_order">#4b6cae</color>
+</resources>
